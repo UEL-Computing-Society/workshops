@@ -10,11 +10,11 @@ Quick-paced, hands-on workshops covering tools and techniques that will actually
 
 | Workshop | Topic | What You'll Learn |
 |----------|-------|-------------------|
-| [01/](01/) | Productivity Tools | gemini-cli, Quarto basics |
-| [api/](api/) | APIs | HTTP, cURL, DevTools, automation |
-| [bash/](bash/) | Bash Basics | Terminal navigation, scripting |
-| [git/](git/) | Git | Version control, collaboration |
-| [05_03_feb_2026/](05_03_feb_2026/) | Term 1 Recap | How these slides work, Q&A |
+| [01_tools/](01_tools/) | Productivity Tools | gemini-cli, Quarto basics |
+| [02_git/](02_git/) | Git | Version control, collaboration |
+| [03_api/](03_api/) | APIs | HTTP, cURL, DevTools, automation |
+| [04_bash/](04_bash/) | Bash Basics | Terminal navigation, scripting |
+| [05_catchup_n_quarto/](05_catchup_n_quarto/) | Term 1 Recap | How these slides work, Q&A |
 
 ## How to Use These Materials
 
@@ -45,11 +45,11 @@ This generates `main.html` - open it in your browser.
 
 If you're new, start with:
 
-1. **01_tools/** - Productivity tools (gemini-cli is a game-changer)
-2. **02_bash/** - You need the terminal
-3. **03_git/** - Version control before you break things
-4. **04_api/** - Automation and understanding how the web works
-5. **05_quarto/** - Recap of term 1 and how
+1. **01_tools/**    - Productivity tools (gemini-cli is a game-changer)
+2. **02_git/**      - Version control before you break things
+3. **03_api/**      - Automation and understanding how the web works
+4. **04_bash/**     - You need the terminal
+5. **05_catchup_and quarto/** - Recap of term 1 and quarto slides
 
 ## Contributing
 
@@ -66,9 +66,7 @@ See something wrong? Want to add a workshop?
 workshop_name/
 ├── main.qmd          # Presentation slides
 ├── main.html         # Generated output (gitignored)
-├── main_files/       # Images, assets (gitignored)
-├── README.md         # Workshop overview
-└── .gitignore       # Quarto outputs
+└── main_files/       # Images, assets (gitignored)
 ```
 
 ## License

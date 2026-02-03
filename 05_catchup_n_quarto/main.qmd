@@ -1,0 +1,281 @@
+---
+title: "Term 1 Recap & How These Slides Work"
+subtitle: "The meta workshop."
+author: "Jayrup Nakawala"
+format: 
+  revealjs:
+    theme: night
+    transition: slide
+    slide-number: true
+    preview-links: auto
+    chalkboard: true
+    code-line-numbers: false
+  html:
+    toc: true
+    theme: darkly
+
+execute:
+  cache: true
+---
+
+# Term 1 Recap
+
+## What We Covered
+
+- **Workshop 1:** Productivity tools (gemini-cli, Quarto)
+- **Workshop 2:** APIs (HTTP, cURL, DevTools)
+- **Workshop 3:** Bash basics (terminal, scripting)
+- **Workshop 4:** Git (version control)
+
+:::{.fragment}
+That's a lot for one term.
+:::
+
+## Quick Recap: gemini-cli
+
+AI assistant in your terminal.
+
+```bash
+gemini "explain recursion to me"
+```
+
+## Quick Recap: APIs
+
+HTTP is just text.
+
+```http
+GET /api/users HTTP/1.1
+Host: example.com
+```
+
+Browser DevTools → Copy as cURL → Automation.
+
+## Quick Recap: Bash
+
+Commands in a file = scripts.
+
+```bash
+for i in *.pdf
+do
+  echo "Processing $i"
+done
+```
+
+## Quick Recap: Git
+
+Time machine for your code.
+
+```bash
+git add .
+git commit -m "message"
+git push
+```
+
+# How These Slides Work
+
+## The Meta Part
+
+You're watching a presentation **about making presentations**.
+
+:::{.fragment}
+Inception vibes.
+:::
+
+## It's Just Markdown
+
+These slides are written in **plain text**.
+
+```markdown
+# Slide Title
+
+- Point one
+- Point two
+```
+
+:::{.fragment}
+No PowerPoint. No Canva. Just code.
+:::
+
+## The File Structure
+
+```
+workshop_name/
+├── main.qmd          # The presentation
+├── main.html         # Generated output
+└── main_files/       # Images, assets
+```
+
+## The YAML Header
+
+```yaml
+---
+title: "My Workshop"
+author: "Jayrup"
+format: revealjs
+theme: night
+chalkboard: true
+---
+```
+
+This controls **everything**.
+
+## RevealJS Theme
+
+```yaml
+theme: night
+```
+
+Options:
+
+- `night` ← we're using this
+- `simple`
+- `dark`
+- `white`
+- ...
+
+[more themes](https://quarto.org/docs/presentations/revealjs/themes.html)
+
+## Running Code
+
+```{python}
+#| echo: true
+print("hello world")
+import matplotlib.pyplot as plt
+plt.plot([1,2,3,4])
+plt.show()
+
+```
+Preserves syntax highlighting automatically.
+
+## Fragments (The Reveal Magic)
+
+Content that **appears step by step**.
+
+```
+:::{.fragment}
+This appears second.
+:::
+```
+
+:::{.fragment}
+This appears second.
+:::
+
+## Callouts
+
+```markdown
+:::{.callout-warning}
+This is a warning.
+:::
+```
+
+:::{.callout-warning}
+**401 vs 403** \
+401: Who are you? \
+403: I know you, but no.
+:::
+
+## Building Your Own
+
+1. Create `workshop_name/main.qmd`
+2. Add the YAML header
+3. Write content in Markdown
+4. Run:
+
+```bash
+quarto render main.qmd
+```
+
+:::{.fragment}
+That's it. You now have a presentation.
+:::
+
+---
+
+# Accessing the Materials
+
+## Where Everything Lives
+
+**github.com/jayrup/computing-society/workshops**
+
+```
+
+workshops
+├── 01_tools        # gemini-cli and quarto basics
+├── 02_git          # git basics
+├── 03_api          # APIs and curl
+├── 04_bash         # bash basics
+├── 05_03_feb_2026  # This one
+└── README.md
+
+```
+
+## How to Use It
+
+1. **Clone it**
+2. **Look at the .qmd files**
+3. **Render them yourself**
+4. **Modify and experiment**
+
+:::{.fragment}
+Learning by doing.
+:::
+
+## The Examples Folder
+
+Each workshop has:
+
+- `main.qmd` ← presentation
+- `main.html` ← rendered version (gitignored)
+- `main_files/` ← assets (gitignored)
+
+## Making Your Own Copies
+
+```bash
+git clone https://uel-computing-society/workshops.git
+cd {workshop_name}
+quarto render main.qmd
+```
+
+Edit the `.qmd` file and render again.
+
+---
+
+# Going Forward
+
+## Term 2 Preview
+
+What do you want to learn?
+
+- Docker?
+- Linux?
+- More automation?
+- Something else?
+
+:::{.fragment}
+Tell me. I'll plan it.
+:::
+
+## The Goal
+
+Build your **toolbox**.
+
+Everything I show you should save you time eventually.
+
+:::{.fragment}
+It's an investment.
+:::
+
+## Final Thoughts
+
+- These slides are just text
+- You can edit them
+- You can share them
+- You can build on them
+
+:::{.fragment}
+That's the power of learning these tools.
+:::
+
+## Go home and break something.{.center}
+

@@ -1,0 +1,28 @@
+# Quarto generated files
+*.html
+*.pdf
+
+# Quarto cache
+_quarto/
+.quarto/
+*_files/
+
+# RevealJS assets
+main_files/
+
+# Jupyter notebooks
+**/*.quarto_ipynb*
+.jupyter_cache/
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python
+__pycache__/
+*.pyc
+.env

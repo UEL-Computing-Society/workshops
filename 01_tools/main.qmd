@@ -1,0 +1,222 @@
+---
+title: "Productivity Tools for CS Students"
+subtitle: "Stop copy-pasting. Start automating."
+author: "Jayrup Nakawala"
+format: revealjs
+theme: night
+transition: slide
+slide-number: true
+preview-links: auto
+chalkboard: true
+code-line-numbers: false
+---
+
+## Who Am I?
+
+- 3rd Year CS Student
+- I like making things that save time
+
+:::{.fragment}
+This workshop exists because I wish someone told me this stuff earlier.
+:::
+
+# Why Are We Here?
+
+## The Problem
+
+You're probably doing this:
+
+1. Read something in a browser
+2. Copy it to AI web-interface
+3. Ask it question, get the answer
+4. Paste into your IDE
+5. Hope it works
+
+:::{.fragment}
+That's slow. And error-prone.
+:::
+
+## The Goal
+
+**Everything in one place.**
+
+- Documentation
+- Code
+- Presentations
+- Reports
+
+:::{.fragment}
+No more tab switching. No more copy-paste errors.
+:::
+
+# Tool 1: gemini-cli
+
+## What is it?
+
+AI assistant **in your terminal**.
+
+**Installation**
+
+```bash
+npm install -g @google/gemini-cli
+```
+
+```bash
+gemini
+```
+
+:::{.fragment}
+It can:
+- Write code
+- Explain errors
+- Suggest fixes
+- All without leaving your IDE
+:::
+
+## First Command
+
+```bash
+gemini "hello, what can you do?"
+```
+
+:::{.fragment}
+Try it now. I'll wait.
+:::
+
+## Why This Matters
+
+- **No browser switching** - ask while you code
+- **Context awareness** - it sees your files
+- **Learning** - it explains, not just gives answers
+
+## Demo: Fixing an Error
+
+Suppose you have broken code:
+
+```python
+def divide(a, b):
+    return a / b
+
+print(divide(10, 0))
+```
+
+:::{.fragment}
+Ask gemini:
+```
+gemini "why is this failing? fix it"
+```
+:::
+
+# Tool 2: Quarto
+
+## What is Quarto?
+
+**Document markup language.**
+
+Think: Markdown + Superpowers.
+
+```markdown
+# Heading
+**Bold text**
+- List item
+```
+
+:::{.fragment}
+But it also does:
+- Presentations
+- Websites
+- PDFs
+- Code execution
+:::
+
+## Why Quarto?
+
+The BI tutorial you saw?
+
+- Written in Quarto
+- One source → PDF + HTML
+- Code runs automatically
+
+## Your First Document
+
+```markdown
+---
+title: "My Document"
+format: pdf
+---
+
+# Hello World
+
+This is my first Quarto document.
+```
+
+## Demo: Make One Now
+
+1. Create `hello.qmd`
+2. Add the content above
+3. Run:
+
+```bash
+quarto render hello.qmd
+```
+
+:::{.fragment}
+You now have a PDF. Congratulations.
+:::
+
+## What Can Quarto Do?
+
+- **Presentations** ← this one!
+- **Reports** ← the BI tutorial
+- **Websites** ← documentation
+- **Books** ← entire books
+
+:::{.fragment}
+All from plain text files.
+:::
+
+# Putting It Together
+
+## The Workflow
+
+1. **Start in terminal** with gemini
+2. **Write content** in Quarto
+3. **Render** to PDF/HTML
+4. **Push to git** for version control
+
+:::{.fragment}
+This is how professionals work.
+:::
+
+## Example: The BI Tutorial
+
+That document you saw at the start?
+
+- Written in Quarto
+- Generated PDF
+- Looks professional
+- Easy to update
+
+:::{.fragment}
+You can make this.
+:::
+
+# Summary
+
+## What We Covered
+
+1. **gemini-cli** - AI in your terminal
+2. **Quarto** - Documents from plain text
+
+## Next Steps
+
+- Practice with `gemini` - ask it anything
+- Try Quarto - make a document today
+- Explore the examples in this repo
+
+:::{.fragment}
+The files are in `quarto_advantages/` folder.
+:::
+
+## Go home and try something new.{.center}
+

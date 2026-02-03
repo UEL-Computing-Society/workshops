@@ -1,0 +1,183 @@
+--- 
+title: "Bash Basics" 
+subtitle: "Become a terminal wizard" 
+author: "Jayrup Nakawala" 
+format: revealjs
+theme: night 
+transition: slide
+slide-number: true 
+preview-links: auto 
+chalkboard: true 
+code-line-numbers: false
+---
+
+## What is Bash?
+
+* Bash is a way to **talk to your computer using text**
+* You type commands
+* The computer does them, exactly and without mercy
+
+:::{.fragment}
+No guessing. No magic.
+:::
+
+## The Terminal
+
+* It’s just a text box
+* Commands run **line by line**
+* If something breaks, it’s usually your fault (good news: you can fix it)
+
+
+## First Command {.center}
+
+```bash
+echo "Hello world"
+```
+
+:::{.fragment}
+What happened?
+
+* The computer printed text
+* That’s it
+* You’re officially dangerous now
+:::
+
+## Where Am I?
+
+```bash
+pwd
+```
+
+* Shows your current folder
+
+```bash
+ls
+```
+
+* Lists files in the folder
+
+
+## Making Things
+
+```bash
+mkdir test
+cd test
+```
+
+* You made a folder
+* You entered the folder
+
+```bash
+touch file.txt
+ls
+```
+
+* You created a file
+* You can see it
+
+
+## Removing Things (Carefully)
+
+```bash
+rm file.txt
+cd ..
+rmdir test
+```
+
+Rule:
+If you delete it here, it’s **gone**. No recycle bin. No regrets.
+
+
+## Your First Script
+
+Create a file:
+
+```bash
+nano hello.sh
+```
+
+Inside it:
+
+```bash
+echo "Hi, I am a script"
+```
+
+Run it:
+
+```bash
+bash hello.sh
+```
+
+Congratulations. That’s scripting.
+
+
+## Variables
+
+```bash
+name="Alice"
+echo "Hello $name"
+```
+
+* Variables store values
+* `$` means “use the value”
+
+
+## User Input
+
+```bash
+echo "What is your name?"
+read name
+echo "Hello $name"
+```
+
+The script listens.
+Then it responds.
+Bare minimum social skills.
+
+
+## Doing Things Multiple Times
+
+```bash
+for i in 1 2 3
+do
+  echo "Hello $i"
+done
+```
+
+Computers love repetition.
+Humans outsource it.
+
+
+## Mini Project: Clean a Folder
+
+```bash
+mkdir images
+mv *.png images/
+```
+
+What this does:
+
+* Finds all `.png` files
+* Moves them into `images/`
+
+If nothing happens:
+
+* The computer found nothing
+* That’s on you
+
+
+## Key Takeaways
+
+* Bash scripts are just commands in a file
+* If you can type it once, you can automate it
+* The terminal is not scary, just honest
+
+
+## Next Steps
+
+* Automate boring tasks
+* Break things in a safe folder
+* Google errors. Everyone does.
+
+You now know more bash than you think.
+

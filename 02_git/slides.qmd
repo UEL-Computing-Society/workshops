@@ -1,0 +1,287 @@
+--- 
+title: "Git: A Time Machine" 
+subtitle: "Stop naming files 'final_v2_REALLY_FINAL.docx'" 
+author: "Jayrup Nakawala" 
+format: revealjs
+theme: night 
+transition: slide
+slide-number: true 
+preview-links: auto 
+chalkboard: true 
+code-line-numbers: false
+---
+
+## Why are we here? {.center}
+
+Because you probably manage files like this:
+
+:::{.fragment}
+
+```bash
+project/
+├── index.html
+├── index_backup.html
+├── index_new.html
+├── index_final.html
+├── index_final_FINAL.html
+└── index_final_v2_dont_touch.html
+```
+
+
+:::
+
+:::{.fragment .fade-up}
+Thats stupid.
+:::
+
+## What is Git? {.center}
+
+
+Git is a save button for your entire project.
+
+
+## It allows you to:
+
+- Save "snapshots" of your folder.
+
+- Travel back in time when you inevitably break something.
+
+- Collaborate without emailing zip files like it's 2003.
+
+# Git $\neq$ GitHub
+
+
+## What is Git?
+
+:::{.columns}
+
+:::{.column width="50%"}
+
+Git
+
+- The tool installed on your machine (CLI).
+- Local.
+- Works without internet.
+- The Engine.
+:::
+
+:::{.column width="50%"}
+
+GitHub
+
+- A website owned by Microsoft.
+- Remote.
+- Needs internet.
+- The Garage where you park your code.
+:::
+
+:::
+
+## Installation 
+
+Open this website:
+
+:::{.r-stack}
+`https://git-scm.com/install/`
+:::
+
+and follow the installation steps.
+
+To verify use
+
+:::{.r-stack}
+`git --version`
+:::
+
+## Basics of terminal
+
+`L`i`s`t - `ls`
+
+`L`i`s`t `a`ll - `ls -a`
+
+`C`hange `D`irectory - `cd [path]`
+
+`M`ake `D`irectory - `mkdir [path]`
+
+`C`opy `F`ile - `cp [path] [path]`
+
+`M`ove `F`ile - `mv [path] [path]`
+
+Create file if it doesn't exist - `touch [path]`
+
+for more information, ask LLMs
+
+## Initialization
+
+```bash
+mkdir my_project # create folder
+cd my_project # move into that folder
+git init . # initialize git
+```
+::: {.callout-tip title="Note"}
+The '`.`' represents the current folder.
+:::
+
+Congratulations, you have created a hidden .git folder that tracks everything.
+
+To check do,
+
+```bash
+ls -a
+```
+
+## Configure
+
+Configure git to use your name and email.
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+Rename the default branch
+```bash
+git branch -m main
+```
+
+## Check Yourself
+
+Before you do anything, always ask Git what it sees.
+
+```bash
+touch test.txt # create a file
+git status # check status
+```
+
+:::{.callout-tip}
+Run git status constantly. If you are confused, run `git status`.
+:::
+
+## Add (Stage)
+
+You created test.txt. Git sees it as "Untracked".
+
+To add a specific file:
+
+```bash
+git add test.txt
+```
+To add everything:
+
+```bash
+git add .
+```
+
+again, the '`.`' represents the current folder.
+
+## Commit (Save)
+
+Seal the box with a label.
+
+```bash
+git commit -m "Created the test file"
+```
+
+
+The `-m` flag is mandatory.
+If you omit it, Git opens Vim.
+
+:::{.fragment}
+If you don't know how to exit Vim, you will live inside that terminal forever.
+:::
+
+## Try it yourself
+
+- Make any changes, be it create, edit or delete.
+- see the status
+  `git status`
+- Stage (add) the changes
+  `git add .`
+- Commit (save) the changes
+  `git commit -m "msg"`
+
+
+## History
+
+You committed 5 times. How do you see them?
+
+```bash
+git log
+```
+
+You will see a list of "hashes" (random looking numbers) and your messages.
+
+Along with your name and email.
+
+## The "Time Machine" Part
+
+You deleted the wrong file. You broke the code.
+Go back to the last safe point.
+
+```bash
+git restore .
+```
+
+this will revert your whole folder to the last commit.
+
+###  if you want a previous version:
+
+```bash
+git checkout [hash]
+```
+
+## GitHub & Remotes
+
+You want to upload your code to the internet.
+
+Create a Repo on GitHub (empty).
+
+To easily link your local git to github, use VSCode.
+
+After that:
+
+```bash
+git remote add origin {url}
+```
+
+Ship it:
+
+```bash
+git push -u origin master
+```
+
+## Keep in mind
+
+- If there are commits on your local machine that you want to `upload`, use `git push`.
+- If there are commits on your cloud that you want to `download`, use `git pull`.
+
+
+## Summary
+
+git init (Start)
+
+git add . (Stage)
+
+git commit -m "msg" (Save)
+
+git push (Upload)
+
+Questions?
+
+:::{.fragment}
+Start using Git today, or enjoy losing your thesis/codebase to a corrupted hard drive.
+:::
+
+## Branching
+
+Imagine you want to try something risky, but you don't want to ruin your working code.
+
+Create a parallel universe.
+
+```bash
+git checkout -b new-feature
+```
+
+Do your work. If it sucks? Delete the branch.
+If it works? Merge it back to master.
+

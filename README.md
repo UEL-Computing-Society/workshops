@@ -15,6 +15,10 @@ Quick-paced, hands-on workshops covering tools and techniques that will actually
 | [03_api/](03_api/) | APIs | HTTP, cURL, DevTools, automation |
 | [04_bash/](04_bash/) | Bash Basics | Terminal navigation, scripting |
 | [05_catchup_n_quarto/](05_catchup_n_quarto/) | Term 1 Recap | How these slides work, Q&A |
+| [06_cyber-security_basics/](06_cyber-security_basics/) | Cybersecurity | Web exploitation, CTF basics |
+| [07_osint/](07_osint/) | OSINT | Foundational intelligence gathering |
+| [08_docker/](08_docker/) | Docker | Containers, images, Docker Compose |
+| [hackathon/](hackathon/) | Hackathon | Pre-hackathon setup, agentic coding with KiloCode |
 
 ## How to Use These Materials
 
@@ -49,7 +53,9 @@ If you're new, start with:
 2. **02_git/**      - Version control before you break things
 3. **03_api/**      - Automation and understanding how the web works
 4. **04_bash/**     - You need the terminal
-5. **05_catchup_and quarto/** - Recap of term 1 and quarto slides
+5. **05_catchup_n_quarto/** - Recap of term 1 and quarto slides
+6. **06_cyber-security_basics/** - Introduction to security and web exploitation
+7. **07_osint/** - Understanding your digital footprint and passive recon
 
 ## Contributing
 

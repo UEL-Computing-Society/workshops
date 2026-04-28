@@ -1,0 +1,290 @@
+---
+title: "Pre-Hackathon Setup"
+subtitle: "Get your tools ready. Tomorrow, you build."
+author: "Jayrup Nakawala"
+format: 
+  revealjs:
+    theme: night
+    transition: slide
+    slide-number: true
+    preview-links: auto
+    chalkboard: true
+    code-line-numbers: false
+  html:
+    toc: true
+    theme: darkly
+execute:
+  cache: true
+---
+
+# What We're Doing Today
+
+## The Goal
+
+By the end of this session, your machine will be ready for the hackathon.
+
+:::{.fragment}
+1. **KiloCode** installed and connected to a free AI model
+2. **Git** installed and working
+3. **GitHub** account logged in locally
+:::
+
+:::{.fragment}
+If you leave today without all three, you'll waste time tomorrow.
+:::
+
+# Step 1: KiloCode
+
+## What is KiloCode?
+
+An AI coding agent that lives **inside VSCode**.
+
+- It reads your files
+- It writes code
+- It runs terminal commands
+- It fixes its own errors
+
+:::{.fragment}
+All without leaving your editor.
+:::
+
+## Install KiloCode
+
+1. Open VSCode
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search **KiloCode**
+4. Click Install
+
+:::{.fragment}
+Do this now. I'll wait.
+:::
+
+## Set Up a Free AI Model
+
+KiloCode needs an AI provider. We'll use **NVIDIA** — it's free.
+
+1. Go to `build.nvidia.com`
+2. Create an account (or sign in)
+3. Get your **API key**
+
+:::{.callout-tip}
+You don't need to pay for anything. NVIDIA gives free access to models on this platform.
+:::
+
+## Connect KiloCode to NVIDIA
+
+1. Open KiloCode settings in VSCode
+2. Select **NVIDIA** as your provider
+3. Paste your API key
+4. Pick a model
+
+:::{.fragment}
+Done. You now have a free AI coding assistant.
+:::
+
+## Test It
+
+Open the KiloCode panel and type:
+
+> "Hello, can you create a file called test.txt with the text 'it works'?"
+
+:::{.fragment}
+If a file appeared, you're set. Delete it and move on.
+:::
+
+:::{.fragment}
+If it didn't work, raise your hand.
+:::
+
+# Step 2: Git
+
+## What is Git?
+
+Git tracks changes to your code.
+
+:::{.fragment}
+Your hackathon project will break. Multiple times. Git lets you go back to when it worked.
+:::
+
+## Install Git
+
+Check if you already have it:
+
+```bash
+git --version
+```
+
+:::{.fragment}
+If it says "command not found":
+
+- **Windows:** Download from `git-scm.com`
+- **Mac:** Run `xcode-select --install`
+- **Linux:** `sudo apt install git` or `sudo pacman -S git`
+:::
+
+## Configure Git
+
+Tell Git who you are:
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "your.email@example.com"
+```
+
+:::{.callout-tip}
+Use the same email as your GitHub account.
+:::
+
+## The Basics
+
+```bash
+git init                          # start tracking
+git add .                         # stage everything
+git commit -m "describe what you did"  # save snapshot
+```
+
+:::{.callout-tip}
+Commit often. After every working feature. Not once at the end.
+:::
+
+## When Things Break
+
+```bash
+git restore .                     # undo all changes since last commit
+git checkout [hash]               # go back to a specific commit
+```
+
+:::{.fragment}
+This is your undo button. Use it aggressively.
+:::
+
+:::{.callout-tip}
+You don't have to memorise any of this. KiloCode can run git commands for you — just ask it to "commit my changes" or "push to GitHub".
+:::
+
+# Step 3: GitHub
+
+## Why GitHub?
+
+- Your team works on different laptops
+- You need to share code
+- You need a backup in the cloud
+
+:::{.fragment}
+If your laptop dies, your project lives on. That's the point.
+:::
+
+## Create a GitHub Account
+
+If you don't have one:
+
+1. Go to `github.com`
+2. Sign up (free)
+
+:::{.fragment}
+Do this now if you haven't already.
+:::
+
+## Log In Locally
+
+Your machine needs to authenticate with GitHub.
+
+The easiest way:
+
+```bash
+gh auth login
+```
+
+:::{.fragment}
+Don't have `gh`? Install the GitHub CLI:
+
+- **Windows:** `winget install GitHub.cli`
+- **Mac:** `brew install gh`
+- **Linux:** `sudo apt install gh`
+:::
+
+## Alternative: HTTPS Authentication
+
+If you prefer not to install `gh`:
+
+```bash
+git push origin main
+```
+
+Git will prompt you for your GitHub username and a **Personal Access Token** (not your password).
+
+:::{.callout-tip}
+Get a token: GitHub → Settings → Developer Settings → Personal Access Tokens → Generate New Token. Give it `repo` scope.
+:::
+
+## Test It
+
+Create a test repo on GitHub, then:
+
+```bash
+mkdir test-project && cd test-project
+git init
+echo "# Test" > README.md
+git add . && git commit -m "first commit"
+git remote add origin https://github.com/YOU/test-project.git
+git push -u origin main
+```
+
+:::{.fragment}
+If it pushed, you're logged in. Delete the repo later if you want.
+:::
+
+## Collaboration Workflow
+
+Tomorrow, your team will need this:
+
+```bash
+git pull                          # get latest changes
+# ... do your work ...
+git add .
+git commit -m "add login feature"
+git push                          # upload your changes
+```
+
+:::{.callout-warning}
+Always `git pull` before you start working. Merge conflicts are avoidable.
+:::
+
+## Merge Conflicts
+
+Two people edited the same line? Git will ask you to choose.
+
+```
+<<<<<<< HEAD
+your code
+=======
+their code
+>>>>>>> branch-name
+```
+
+:::{.fragment}
+Pick one. Delete the markers. Commit. Move on with your life.
+:::
+
+# Checklist
+
+## Before You Leave
+
+Make sure all of these work:
+
+- [ ] VSCode is installed
+- [ ] KiloCode extension is installed
+- [ ] NVIDIA account created, API key connected
+- [ ] KiloCode responds to prompts
+- [ ] `git --version` works
+- [ ] `git config` is set (name + email)
+- [ ] GitHub account exists
+- [ ] You can `git push` to GitHub
+
+:::{.fragment}
+If anything is broken, fix it now. Not tomorrow morning.
+:::
+
+## Questions? {.center}
+
+## See you at the hackathon.{.center}

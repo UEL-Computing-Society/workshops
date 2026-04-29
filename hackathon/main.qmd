@@ -1,0 +1,218 @@
+---
+title: "AI Buildathon"
+subtitle: "Retro Games with a Twist"
+author: "Computing Society"
+format: 
+  revealjs:
+    theme: night
+    transition: slide
+    slide-number: true
+    preview-links: auto
+    chalkboard: true
+    code-line-numbers: false
+  html:
+    toc: true
+    theme: darkly
+execute:
+  cache: true
+---
+
+# Agentic Coding
+
+## The Agentic Way
+
+You describe what you want. The AI writes the code, runs it, sees the error, fixes it.
+
+:::{.fragment}
+You stop being a typist. You become an engineer.
+:::
+
+## KiloCode
+
+An AI coding agent that lives **inside VSCode**.
+
+- It reads your files
+- It writes code
+- It runs terminal commands
+- It fixes its own errors
+
+:::{.fragment}
+All without leaving your editor.
+:::
+
+## Installation
+
+1. Open VSCode
+2. Go to Extensions (Ctrl+Shift+X)
+3. Search **KiloCode**
+4. Click Install
+
+## You Don't Need to Pay
+
+KiloCode has a **free tier** built in. No API key. No sign-up.
+
+1. Install KiloCode
+2. Open the panel
+3. Start prompting
+
+:::{.callout-tip}
+The free tier is enough for the hackathon. Just use it.
+:::
+
+# The Theme
+
+## Retro Games with a Twist
+
+The hackathon theme is **retro games with a twist**.
+
+Take a classic game. Add something unexpected.
+
+:::{.fragment}
+You're judged on two things:
+
+1. **How good your idea is** — the twist matters
+2. **How good your implementation is** — it needs to work
+:::
+
+## Why This Theme?
+
+AI models (even the small, free ones) already know how to build retro games.
+
+:::{.fragment}
+Snake, Pong, Tetris, Breakout, Space Invaders. The AI has seen thousands of implementations.
+:::
+
+:::{.fragment}
+You don't need experience. You need a good idea and clear prompts.
+:::
+
+# KiloCode in Action
+
+## Step 1: Brainstorm
+
+Open KiloCode and **ask it questions**. Don't write code yet.
+
+> "I want to build a retro game with a twist. Is Snake with gravity a good idea?"
+
+> "What other twists could work?"
+
+> "Is this doable in a few hours?"
+
+:::{.fragment}
+Use **Ask mode** — it talks to you without touching your code.
+:::
+
+## Step 2: Plan
+
+Once you have an idea, ask KiloCode to **make a plan**.
+
+> "Create a step-by-step plan to build Snake with gravity using HTML Canvas and vanilla JS."
+
+:::{.fragment}
+Use **Architect mode** — it thinks through the structure before writing anything.
+:::
+
+:::{.fragment}
+Review the plan. If something looks wrong or too ambitious, push back. Narrow the scope.
+:::
+
+## Step 3: Implement
+
+Now build it. One piece at a time.
+
+1. "Set up the HTML Canvas and game loop"
+2. "Add the snake and basic movement"
+3. "Add gravity — the snake falls unless moving up"
+5. "Add pixel art styling and game over screen"
+
+:::{.fragment}
+Use **Code mode** — it writes and edits files for you.
+:::
+
+:::{.callout-tip}
+After each step: test it, then ask KiloCode to "commit my changes". Small commits. Always.
+:::
+
+## Trust but Verify
+
+- **Read the code** it writes — you need to understand it
+- **Check the output** — run it yourself
+- **Don't blindly approve** — it can make mistakes
+
+:::{.callout-warning}
+Read what it's about to do before clicking "Approve". If it looks wrong, deny it and re-prompt.
+:::
+
+# Final Submission
+
+## What Judges Need
+
+A **GitHub repo** they can:
+
+1. `git clone` to their machine
+2. Read the README
+3. Run the project
+4. See it work
+
+:::{.fragment}
+Make sure they can clone it and run it.
+:::
+
+## Your README
+
+```markdown
+# Project Name
+What it does (1-2 sentences)
+
+## How to Run
+1. Clone the repo
+2. Install dependencies: `pip install -r requirements.txt`
+3. Run: `python app.py`
+
+## Team Members
+- Name 1
+- Name 2
+```
+
+# Presentations
+
+## At the End
+
+Each team gets **5 minutes** on stage.
+
+1. **Explain your idea** — what's the game, what's the twist?
+2. **Live demo** — open it up and show it working
+
+:::{.callout-tip}
+Keep it simple. Name the game, explain the twist.
+:::
+
+# Summary
+
+## The Workflow
+
+1. **Set up KiloCode** with a free model
+2. **Prompt clearly** — specific, step-by-step
+3. **Git init** from the start
+4. **Commit after every feature**
+5. **Push to GitHub** regularly
+6. **Write a README** that judges can follow
+
+:::{.fragment}
+Build. Commit. Push. Repeat.
+:::
+
+## Questions? {.center}
+
+## Agenda {.smaller}
+
+| Time | Activity |
+|------|----------|
+| 14:00–14:30 | Arrival, registration, opening remarks, briefing on theme, rules, and judging criteria |
+| 14:45–17:45 | Build phase |
+| 17:45–18:00 | Final submissions freeze code, push to GitHub |
+| 18:00–19:30 | Pitches and live demos |
+| 19:30–20:00 | Deliberation and confirmation of winners |
+
+## Good luck have fun!{.center}
+
